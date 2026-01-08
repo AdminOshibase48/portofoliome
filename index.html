@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nursyam | Web & Digital Marketing</title>
+  <title>Nursyam — Web & Digital Marketing</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
   <style>
     :root {
@@ -14,6 +15,7 @@
       --text: #e5e7eb;
       --muted: #9ca3af;
       --accent: #6366f1;
+      --border: #1f2937;
     }
 
     * {
@@ -29,32 +31,65 @@
       line-height: 1.7;
     }
 
-    section {
-      padding: 100px 8%;
-      max-width: 1200px;
-      margin: auto;
+    a {
+      color: inherit;
+      text-decoration: none;
     }
 
-    h1, h2, h3 {
+    /* NAVBAR */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(11,15,25,0.8);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      z-index: 100;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 16px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-logo {
       font-weight: 700;
       letter-spacing: -0.02em;
     }
 
-    p {
+    .nav-links a {
+      margin-left: 24px;
+      font-size: 0.95rem;
       color: var(--muted);
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    section {
+      padding: 120px 8%;
+      max-width: 1200px;
+      margin: auto;
     }
 
     /* HERO */
     .hero {
       min-height: 100vh;
       display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
+      grid-template-columns: 1.1fr 0.9fr;
       gap: 60px;
       align-items: center;
     }
 
     .hero h1 {
-      font-size: 3rem;
+      font-size: 3.2rem;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
     }
 
     .hero span {
@@ -62,32 +97,31 @@
     }
 
     .hero p {
-      margin-top: 20px;
-      font-size: 1.1rem;
+      margin-top: 24px;
+      max-width: 520px;
+      font-size: 1.05rem;
+      color: var(--muted);
     }
 
     .cta {
-      margin-top: 35px;
+      margin-top: 40px;
       display: inline-block;
       padding: 14px 34px;
       background: var(--accent);
-      color: white;
       border-radius: 8px;
-      text-decoration: none;
       font-weight: 600;
       transition: 0.3s;
     }
 
     .cta:hover {
       transform: translateY(-3px);
-      opacity: 0.9;
     }
 
     .hero-img {
-      width: 100%;
       max-width: 360px;
       border-radius: 24px;
       overflow: hidden;
+      border: 1px solid var(--border);
       justify-self: center;
     }
 
@@ -96,106 +130,70 @@
       display: block;
     }
 
+    /* SOCIAL */
+    .social {
+      margin-top: 30px;
+      display: flex;
+      gap: 18px;
+    }
+
+    .social a {
+      font-size: 1.2rem;
+      color: var(--muted);
+      transition: 0.3s;
+    }
+
+    .social a:hover {
+      color: var(--accent);
+      transform: translateY(-2px);
+    }
+
     /* SECTION TITLE */
     .section-title {
-      margin-bottom: 50px;
+      margin-bottom: 60px;
     }
 
     .section-title h2 {
       font-size: 2.2rem;
+      letter-spacing: -0.02em;
     }
 
     .section-title p {
       margin-top: 10px;
       max-width: 500px;
+      color: var(--muted);
     }
 
-    /* ABOUT */
-    .about-grid {
+    /* CARDS */
+    .grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-    }
-
-    /* SKILLS */
-    .skills {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 24px;
-    }
-
-    .skill {
-      background: var(--card);
-      padding: 24px;
-      border-radius: 14px;
-      transition: 0.3s;
-    }
-
-    .skill:hover {
-      transform: translateY(-6px);
-    }
-
-    /* PROJECTS */
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 28px;
     }
 
-    .project {
+    .card {
       background: var(--card);
       padding: 28px;
-      border-radius: 16px;
+      border-radius: 18px;
+      border: 1px solid var(--border);
       transition: 0.3s;
     }
 
-    .project:hover {
+    .card:hover {
       transform: translateY(-8px);
-    }
-
-    /* TESTIMONIALS */
-    .testimonials {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-    }
-
-    .testimonial {
-      background: var(--card);
-      padding: 30px;
-      border-radius: 18px;
-    }
-
-    .testimonial p {
-      font-style: italic;
-      margin-bottom: 20px;
-    }
-
-    .testimonial h4 {
-      font-size: 1rem;
-    }
-
-    .testimonial span {
-      color: var(--muted);
-      font-size: 0.9rem;
     }
 
     /* CONTACT */
     .contact-box {
       background: linear-gradient(135deg, #6366f1, #8b5cf6);
-      padding: 60px;
-      border-radius: 24px;
+      padding: 70px;
+      border-radius: 28px;
       text-align: center;
-    }
-
-    .contact-box p {
-      color: #e0e7ff;
-      margin-top: 15px;
     }
 
     footer {
       text-align: center;
-      padding: 40px;
+      padding: 50px;
       color: var(--muted);
       font-size: 0.9rem;
     }
@@ -217,29 +215,51 @@
         grid-template-columns: 1fr;
         text-align: center;
       }
+      .social {
+        justify-content: center;
+      }
       .hero-img {
         margin-top: 40px;
-      }
-      .about-grid {
-        grid-template-columns: 1fr;
       }
     }
   </style>
 </head>
 <body>
 
+  <!-- NAVBAR -->
+  <nav>
+    <div class="nav-container">
+      <div class="nav-logo">Nursyam</div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
   <!-- HERO -->
   <section class="hero reveal">
     <div>
       <h1>
-        Muhammad Anindya <span>Nursyam</span><br>
+        Muhammad Anindya<br>
+        <span>Nursyam</span><br>
         Web & Digital Marketing
       </h1>
       <p>
-        I help brands, UMKM, and personal projects build a modern digital presence
-        through clean websites and thoughtful content.
+        Helping brands, UMKM, and personal projects build a clean,
+        modern, and effective digital presence.
       </p>
+
       <a href="#contact" class="cta">Work With Me</a>
+
+      <div class="social">
+        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="#" title="TikTok"><i class="fab fa-tiktok"></i></a>
+      </div>
     </div>
 
     <div class="hero-img">
@@ -248,100 +268,49 @@
   </section>
 
   <!-- ABOUT -->
-  <section class="reveal">
+  <section id="about" class="reveal">
     <div class="section-title">
       <h2>About Me</h2>
-      <p>Young digital talent with a focus on clarity, design, and results.</p>
+      <p>Young digital talent with focus on clarity, design, and results.</p>
     </div>
-
-    <div class="about-grid">
-      <p>
+    <div class="grid">
+      <div class="card">
         I’m a freelance web and digital marketing enthusiast with a background
         from RevoU Coding Camp and Digital Marketing Program.
-        I enjoy creating clean, functional, and modern digital experiences.
-      </p>
-      <p>
-        My approach is simple: understand the goal, design with intention,
-        and execute clearly. I value communication, efficiency,
-        and long-term collaboration.
-      </p>
+      </div>
+      <div class="card">
+        I believe good digital products should look clean,
+        work smoothly, and communicate clearly.
+      </div>
     </div>
   </section>
 
   <!-- SKILLS -->
-  <section class="reveal">
+  <section id="skills" class="reveal">
     <div class="section-title">
       <h2>Skills</h2>
-      <p>What I can help you with.</p>
+      <p>Tools and expertise I use.</p>
     </div>
-
-    <div class="skills">
-      <div class="skill">HTML & CSS (Responsive Layout)</div>
-      <div class="skill">Basic JavaScript Interaction</div>
-      <div class="skill">Landing Page & Company Profile</div>
-      <div class="skill">Canva Design</div>
-      <div class="skill">Content Planning & Copywriting</div>
-      <div class="skill">Basic Digital Marketing Analytics</div>
+    <div class="grid">
+      <div class="card">HTML & CSS (Responsive)</div>
+      <div class="card">Basic JavaScript</div>
+      <div class="card">Landing Page & Company Profile</div>
+      <div class="card">Canva & Visual Content</div>
+      <div class="card">Content Planning & Copywriting</div>
+      <div class="card">Basic Digital Marketing Analytics</div>
     </div>
   </section>
 
-  <!-- PROJECTS -->
-  <section class="reveal">
+  <!-- WORK -->
+  <section id="work" class="reveal">
     <div class="section-title">
       <h2>Selected Works</h2>
-      <p>Examples of projects and solutions I can deliver.</p>
+      <p>Examples of solutions I can deliver.</p>
     </div>
-
-    <div class="projects">
-      <div class="project">
-        <h3>Modern Landing Page</h3>
-        <p>Clean and responsive landing page focused on clarity and conversion.</p>
-      </div>
-      <div class="project">
-        <h3>Social Media Content Plan</h3>
-        <p>Strategic content planning aligned with brand tone and trends.</p>
-      </div>
-      <div class="project">
-        <h3>Personal Portfolio Website</h3>
-        <p>Minimalist portfolio website with smooth animation.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- TESTIMONIALS -->
-  <section class="reveal">
-    <div class="section-title">
-      <h2>What Clients Say</h2>
-      <p>Feedback from previous collaborations.</p>
-    </div>
-
-    <div class="testimonials">
-      <div class="testimonial">
-        <p>
-          “Nursyam delivered exactly what we needed. The website looks clean,
-          professional, and works perfectly on mobile.”
-        </p>
-        <h4>Andi Pratama</h4>
-        <span>UMKM Owner</span>
-      </div>
-
-      <div class="testimonial">
-        <p>
-          “Communication was smooth and revisions were handled quickly.
-          Great attention to detail.”
-        </p>
-        <h4>Siti Rahma</h4>
-        <span>Content Manager</span>
-      </div>
-
-      <div class="testimonial">
-        <p>
-          “A young talent with a strong understanding of digital presentation.
-          Highly recommended for small to mid projects.”
-        </p>
-        <h4>Rizky Mahendra</h4>
-        <span>Startup Team</span>
-      </div>
+    <div class="grid">
+      <div class="card">Modern Landing Page</div>
+      <div class="card">Social Media Content Strategy</div>
+      <div class="card">Personal Portfolio Website</div>
     </div>
   </section>
 
@@ -350,7 +319,7 @@
     <div class="contact-box">
       <h2>Let’s work together</h2>
       <p>Available for freelance projects and collaborations.</p>
-      <a href="https://wa.me/62XXXXXXXXXX" class="cta">Contact Me</a>
+      <a href="#" class="cta">Contact Me</a>
     </div>
   </section>
 
@@ -367,7 +336,7 @@
         }
       });
     }, { threshold: 0.15 });
-    reveals.forEach(r => observer.observe(r));
+    reveals.forEach(el => observer.observe(el));
   </script>
 
 </body>
