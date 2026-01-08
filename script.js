@@ -1,15 +1,13 @@
-// LANGUAGE
+// Language toggle
 let lang = 'id';
-const toggle = document.getElementById('langToggle');
-
-toggle.addEventListener('click', () => {
+document.getElementById('langToggle').addEventListener('click', () => {
   lang = lang === 'id' ? 'en' : 'id';
   document.querySelectorAll('[data-id]').forEach(el => {
     el.textContent = el.dataset[lang];
   });
 });
 
-// SCROLL ANIMATION
+// Scroll animation
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if(entry.isIntersecting){
