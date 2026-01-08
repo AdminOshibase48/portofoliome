@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio | Web & Digital Marketing</title>
+  <title>Nursyam | Web & Digital Marketing</title>
 
-  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -43,19 +42,19 @@
 
     p {
       color: var(--muted);
-      font-size: 1rem;
     }
 
     /* HERO */
     .hero {
       min-height: 100vh;
-      display: flex;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 60px;
       align-items: center;
     }
 
     .hero h1 {
-      font-size: 3.2rem;
-      max-width: 700px;
+      font-size: 3rem;
     }
 
     .hero span {
@@ -64,12 +63,11 @@
 
     .hero p {
       margin-top: 20px;
-      max-width: 600px;
       font-size: 1.1rem;
     }
 
     .cta {
-      margin-top: 40px;
+      margin-top: 35px;
       display: inline-block;
       padding: 14px 34px;
       background: var(--accent);
@@ -83,6 +81,19 @@
     .cta:hover {
       transform: translateY(-3px);
       opacity: 0.9;
+    }
+
+    .hero-img {
+      width: 100%;
+      max-width: 360px;
+      border-radius: 24px;
+      overflow: hidden;
+      justify-self: center;
+    }
+
+    .hero-img img {
+      width: 100%;
+      display: block;
     }
 
     /* SECTION TITLE */
@@ -142,8 +153,31 @@
       transform: translateY(-8px);
     }
 
-    .project h3 {
-      margin-bottom: 10px;
+    /* TESTIMONIALS */
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .testimonial {
+      background: var(--card);
+      padding: 30px;
+      border-radius: 18px;
+    }
+
+    .testimonial p {
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+
+    .testimonial h4 {
+      font-size: 1rem;
+    }
+
+    .testimonial span {
+      color: var(--muted);
+      font-size: 0.9rem;
     }
 
     /* CONTACT */
@@ -154,16 +188,11 @@
       text-align: center;
     }
 
-    .contact-box h2 {
-      font-size: 2.4rem;
-    }
-
     .contact-box p {
       color: #e0e7ff;
       margin-top: 15px;
     }
 
-    /* FOOTER */
     footer {
       text-align: center;
       padding: 40px;
@@ -183,17 +212,16 @@
       transform: translateY(0);
     }
 
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2.3rem;
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
       }
-
+      .hero-img {
+        margin-top: 40px;
+      }
       .about-grid {
         grid-template-columns: 1fr;
-      }
-
-      .contact-box {
-        padding: 40px 20px;
       }
     }
   </style>
@@ -204,15 +232,18 @@
   <section class="hero reveal">
     <div>
       <h1>
-        I build <span>modern websites</span><br>
-        and digital presence<br>
-        that actually work.
+        Muhammad Anindya <span>Nursyam</span><br>
+        Web & Digital Marketing
       </h1>
       <p>
-        Freelance Web & Digital Marketing.  
-        Background from RevoU Coding Camp & Digital Marketing Program.
+        I help brands, UMKM, and personal projects build a modern digital presence
+        through clean websites and thoughtful content.
       </p>
-      <a href="#contact" class="cta">Let’s Work Together</a>
+      <a href="#contact" class="cta">Work With Me</a>
+    </div>
+
+    <div class="hero-img">
+      <img src="profile.jpg" alt="Nursyam">
     </div>
   </section>
 
@@ -220,19 +251,19 @@
   <section class="reveal">
     <div class="section-title">
       <h2>About Me</h2>
-      <p>Young digital talent with a strong focus on clarity, design, and results.</p>
+      <p>Young digital talent with a focus on clarity, design, and results.</p>
     </div>
 
     <div class="about-grid">
       <p>
-        I help brands, UMKM, and personal projects present themselves professionally
-        through clean websites and thoughtful digital content.
-        My approach prioritizes usability, modern aesthetics, and clear communication.
+        I’m a freelance web and digital marketing enthusiast with a background
+        from RevoU Coding Camp and Digital Marketing Program.
+        I enjoy creating clean, functional, and modern digital experiences.
       </p>
       <p>
-        With hands-on learning from RevoU, I understand both technical execution
-        and digital marketing fundamentals. I work efficiently, communicate clearly,
-        and always aim to deliver value.
+        My approach is simple: understand the goal, design with intention,
+        and execute clearly. I value communication, efficiency,
+        and long-term collaboration.
       </p>
     </div>
   </section>
@@ -241,15 +272,15 @@
   <section class="reveal">
     <div class="section-title">
       <h2>Skills</h2>
-      <p>Tools and expertise I use to deliver quality results.</p>
+      <p>What I can help you with.</p>
     </div>
 
     <div class="skills">
-      <div class="skill">HTML, CSS (Responsive & Clean Layout)</div>
+      <div class="skill">HTML & CSS (Responsive Layout)</div>
       <div class="skill">Basic JavaScript Interaction</div>
       <div class="skill">Landing Page & Company Profile</div>
-      <div class="skill">Canva Design & Visual Content</div>
-      <div class="skill">Content Planning (Instagram & TikTok)</div>
+      <div class="skill">Canva Design</div>
+      <div class="skill">Content Planning & Copywriting</div>
       <div class="skill">Basic Digital Marketing Analytics</div>
     </div>
   </section>
@@ -258,21 +289,58 @@
   <section class="reveal">
     <div class="section-title">
       <h2>Selected Works</h2>
-      <p>A few examples of what I can help you build.</p>
+      <p>Examples of projects and solutions I can deliver.</p>
     </div>
 
     <div class="projects">
       <div class="project">
         <h3>Modern Landing Page</h3>
-        <p>Responsive landing page focused on clarity, conversion, and clean UI.</p>
+        <p>Clean and responsive landing page focused on clarity and conversion.</p>
       </div>
       <div class="project">
-        <h3>Digital Content Strategy</h3>
-        <p>Content planning and copywriting tailored for social media growth.</p>
+        <h3>Social Media Content Plan</h3>
+        <p>Strategic content planning aligned with brand tone and trends.</p>
       </div>
       <div class="project">
         <h3>Personal Portfolio Website</h3>
-        <p>Minimalist portfolio with smooth animations and strong visual hierarchy.</p>
+        <p>Minimalist portfolio website with smooth animation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="reveal">
+    <div class="section-title">
+      <h2>What Clients Say</h2>
+      <p>Feedback from previous collaborations.</p>
+    </div>
+
+    <div class="testimonials">
+      <div class="testimonial">
+        <p>
+          “Nursyam delivered exactly what we needed. The website looks clean,
+          professional, and works perfectly on mobile.”
+        </p>
+        <h4>Andi Pratama</h4>
+        <span>UMKM Owner</span>
+      </div>
+
+      <div class="testimonial">
+        <p>
+          “Communication was smooth and revisions were handled quickly.
+          Great attention to detail.”
+        </p>
+        <h4>Siti Rahma</h4>
+        <span>Content Manager</span>
+      </div>
+
+      <div class="testimonial">
+        <p>
+          “A young talent with a strong understanding of digital presentation.
+          Highly recommended for small to mid projects.”
+        </p>
+        <h4>Rizky Mahendra</h4>
+        <span>Startup Team</span>
       </div>
     </div>
   </section>
@@ -280,21 +348,18 @@
   <!-- CONTACT -->
   <section id="contact" class="reveal">
     <div class="contact-box">
-      <h2>Let’s build something great</h2>
-      <p>
-        Open for freelance projects, collaborations, or discussions.
-      </p>
+      <h2>Let’s work together</h2>
+      <p>Available for freelance projects and collaborations.</p>
       <a href="https://wa.me/62XXXXXXXXXX" class="cta">Contact Me</a>
     </div>
   </section>
 
   <footer>
-    © 2026 — Freelance Web & Digital Marketing
+    © 2026 — Muhammad Anindya Nursyam Freelance Web & Digital Marketing
   </footer>
 
   <script>
     const reveals = document.querySelectorAll('.reveal');
-
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -302,7 +367,6 @@
         }
       });
     }, { threshold: 0.15 });
-
     reveals.forEach(r => observer.observe(r));
   </script>
 
