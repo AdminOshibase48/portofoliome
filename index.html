@@ -1,191 +1,183 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Nursyam — Digital Freelancer</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nursyam | Digital Freelancer</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    :root {
-      --bg: #0f172a;
-      --card: #111827;
-      --primary: #38bdf8;
-      --text: #e5e7eb;
-      --muted: #9ca3af;
-    }
+<style>
+:root{
+  --bg:#020617;
+  --card:#0f172a;
+  --primary:#38bdf8;
+  --text:#e5e7eb;
+  --muted:#9ca3af;
+}
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Inter', sans-serif;
-    }
+*{box-sizing:border-box;margin:0;padding:0;font-family:'Inter',sans-serif}
 
-    body {
-      background: radial-gradient(circle at top, #020617, var(--bg));
-      color: var(--text);
-      line-height: 1.6;
-    }
+body{
+  background:radial-gradient(circle at top,#020617,#020617);
+  color:var(--text);
+}
 
-    header {
-      max-width: 1100px;
-      margin: auto;
-      padding: 80px 20px;
-      display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      align-items: center;
-      gap: 40px;
-    }
+/* ====== GLOBAL ====== */
+section{
+  max-width:1100px;
+  margin:auto;
+  padding:80px 20px;
+}
 
-    .hero h1 {
-      font-size: 3rem;
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
+.card{
+  background:rgba(255,255,255,0.04);
+  border-radius:18px;
+  padding:32px;
+  backdrop-filter:blur(12px);
+}
 
-    .hero h1 span {
-      color: var(--primary);
-    }
+/* ====== HERO ====== */
+header{
+  max-width:1100px;
+  margin:auto;
+  padding:90px 20px 40px;
+  display:grid;
+  grid-template-columns:1.2fr 1fr;
+  gap:40px;
+  align-items:center;
+}
 
-    .hero p {
-      color: var(--muted);
-      font-size: 1.1rem;
-      margin-bottom: 25px;
-    }
+.hero{
+  animation:fadeUp 1s ease forwards;
+}
 
-    .btn {
-      display: inline-block;
-      padding: 14px 28px;
-      background: linear-gradient(135deg, #38bdf8, #0ea5e9);
-      color: #020617;
-      border-radius: 10px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
+.hero h1{
+  font-size:3rem;
+  font-weight:700;
+}
 
-    .btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 30px rgba(56,189,248,0.4);
-    }
+.hero span{color:var(--primary)}
 
-    .photo {
-      display: flex;
-      justify-content: center;
-    }
+.hero p{
+  margin:18px 0 28px;
+  color:var(--muted);
+  font-size:1.1rem;
+}
 
-    .photo img {
-      width: 260px;
-      border-radius: 24px;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.6);
-      animation: float 6s ease-in-out infinite;
-    }
+.btn{
+  display:inline-block;
+  padding:14px 30px;
+  background:linear-gradient(135deg,#38bdf8,#0ea5e9);
+  color:#020617;
+  border-radius:12px;
+  font-weight:600;
+  text-decoration:none;
+}
 
-    @keyframes float {
-      0%,100% { transform: translateY(0); }
-      50% { transform: translateY(-12px); }
-    }
+.photo{
+  display:flex;
+  justify-content:center;
+  animation:fadeUp 1.2s ease forwards;
+}
 
-    section {
-      max-width: 1100px;
-      margin: auto;
-      padding: 80px 20px;
-    }
+.photo img{
+  width:260px;
+  border-radius:26px;
+  animation:float 6s ease-in-out infinite;
+  box-shadow:0 20px 50px rgba(0,0,0,.6);
+}
 
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
+/* ====== CONTENT ====== */
+h2{
+  font-size:2rem;
+  margin-bottom:20px;
+}
 
-    .about, .skills, .portfolio, .testimonials {
-      background: rgba(17,24,39,0.6);
-      border-radius: 20px;
-      padding: 40px;
-      backdrop-filter: blur(12px);
-      margin-bottom: 40px;
-    }
+.skills-grid,
+.portfolio-grid,
+.testimonial-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
 
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 20px;
-    }
+.skill{text-align:center;font-weight:600}
 
-    .skill {
-      background: rgba(255,255,255,0.04);
-      padding: 20px;
-      border-radius: 14px;
-      font-weight: 600;
-      text-align: center;
-    }
+/* ====== SOCIAL ====== */
+.socials{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+}
 
-    .portfolio-grid, .testimonial-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-      gap: 20px;
-    }
+.socials a{
+  color:var(--primary);
+  text-decoration:none;
+  font-weight:600;
+}
 
-    .card {
-      background: rgba(255,255,255,0.04);
-      padding: 24px;
-      border-radius: 16px;
-    }
+/* ====== FLOATING ====== */
+.lang-toggle{
+  position:fixed;
+  top:18px;
+  right:18px;
+  background:rgba(255,255,255,.08);
+  padding:8px 14px;
+  border-radius:20px;
+  cursor:pointer;
+  font-weight:600;
+}
 
-    .testimonial {
-      font-size: 0.95rem;
-      color: var(--muted);
-    }
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:#fff;
+  padding:14px 18px;
+  border-radius:50px;
+  font-weight:600;
+  text-decoration:none;
+  box-shadow:0 10px 30px rgba(0,0,0,.3);
+}
 
-    .testimonial strong {
-      display: block;
-      margin-top: 12px;
-      color: var(--text);
-    }
+/* ====== FOOTER ====== */
+footer{
+  text-align:center;
+  padding:40px 20px;
+  color:var(--muted);
+  font-size:.9rem;
+}
 
-    .socials {
-      display: flex;
-      gap: 20px;
-      margin-top: 20px;
-    }
+/* ====== ANIMATION ====== */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(30px)}
+  to{opacity:1;transform:translateY(0)}
+}
+@keyframes float{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-12px)}
+}
 
-    .socials a {
-      color: var(--primary);
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    footer {
-      text-align: center;
-      padding: 40px 20px;
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-
-    .lang-toggle {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background: rgba(255,255,255,0.08);
-      padding: 8px 14px;
-      border-radius: 20px;
-      cursor: pointer;
-      font-weight: 600;
-    }
-
-    @media(max-width: 900px){
-      header {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-    }
-  </style>
+/* ====== MOBILE ====== */
+@media(max-width:900px){
+  header{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+  .photo img{width:220px}
+}
+</style>
 </head>
 
 <body>
 
 <div class="lang-toggle" onclick="toggleLang()">ID / EN</div>
+
+<a class="whatsapp" href="https://wa.me/628XXXXXXXXX" target="_blank">
+💬 WhatsApp
+</a>
 
 <header>
   <div class="hero">
@@ -194,59 +186,59 @@
        data-en="Digital Freelancer • Web & Digital Marketing">
        Digital Freelancer • Web & Digital Marketing
     </p>
-    <a href="#contact" class="btn" data-id="Hubungi Saya" data-en="Contact Me">Hubungi Saya</a>
+    <a href="#contact" class="btn"
+       data-id="Hubungi Saya"
+       data-en="Contact Me">
+       Hubungi Saya
+    </a>
   </div>
 
   <div class="photo">
-    <!-- Ganti src dengan foto kamu -->
-    <img src="https://via.placeholder.com/400x500.png?text=Your+Photo" alt="Nursyam">
+    <img src="https://via.placeholder.com/400x500.png?text=Your+Photo">
   </div>
 </header>
 
 <section>
-  <div class="about">
+  <div class="card">
     <h2 data-id="Tentang Saya" data-en="About Me">Tentang Saya</h2>
-    <p data-id="Saya adalah freelance muda yang fokus pada pembuatan website modern dan strategi digital marketing. Berpengalaman belajar di RevoU dan terbiasa mengerjakan project dengan standar profesional."
-       data-en="I am a young freelancer focused on modern website development and digital marketing strategies. Trained through RevoU and accustomed to delivering projects with professional standards.">
+    <p data-id="Saya adalah freelancer muda yang fokus pada website modern dan digital marketing. Berpengalaman belajar di RevoU dan terbiasa bekerja dengan standar profesional."
+       data-en="I am a young freelancer focused on modern websites and digital marketing. Trained at RevoU and used to working with professional standards.">
     </p>
   </div>
+</section>
 
-  <div class="skills">
+<section>
+  <div class="card">
     <h2>Skills</h2>
     <div class="skills-grid">
-      <div class="skill">HTML • CSS</div>
+      <div class="skill">HTML & CSS</div>
       <div class="skill">JavaScript (Basic)</div>
       <div class="skill">Landing Page</div>
       <div class="skill">Digital Marketing</div>
       <div class="skill">Content Strategy</div>
-      <div class="skill">Canva Design</div>
+      <div class="skill">Canva</div>
     </div>
   </div>
+</section>
 
-  <div class="portfolio">
-    <h2>Portfolio</h2>
-    <div class="portfolio-grid">
-      <div class="card">Website Landing Page</div>
-      <div class="card">Digital Campaign Concept</div>
-      <div class="card">Personal Project</div>
-    </div>
-  </div>
-
-  <div class="testimonials">
+<section>
+  <div class="card">
     <h2 data-id="Testimoni" data-en="Testimonials">Testimoni</h2>
     <div class="testimonial-grid">
-      <div class="card testimonial">
-        “Pengerjaan cepat, komunikatif, dan hasilnya modern. Sangat recommended.”
+      <div class="card">
+        “Hasil kerja rapi, modern, dan cepat.”
         <strong>— Andi, UMKM Owner</strong>
       </div>
-      <div class="card testimonial">
-        “Walaupun masih muda, hasil kerjanya rapi dan profesional.”
+      <div class="card">
+        “Komunikasi enak dan paham kebutuhan klien.”
         <strong>— Sarah, Content Manager</strong>
       </div>
     </div>
   </div>
+</section>
 
-  <div id="contact" class="about">
+<section id="contact">
+  <div class="card">
     <h2>Contact</h2>
     <p>Email: yourmail@gmail.com</p>
     <div class="socials">
@@ -258,18 +250,17 @@
 </section>
 
 <footer>
-  © 2026 Nursyam — Digital Freelancer
+© 2026 Nursyam — Digital Freelancer
 </footer>
 
 <script>
-  let currentLang = 'id';
-
-  function toggleLang(){
-    currentLang = currentLang === 'id' ? 'en' : 'id';
-    document.querySelectorAll('[data-id]').forEach(el => {
-      el.textContent = el.dataset[currentLang];
-    });
-  }
+let lang='id';
+function toggleLang(){
+  lang = lang === 'id' ? 'en' : 'id';
+  document.querySelectorAll('[data-id]').forEach(el=>{
+    el.textContent = el.dataset[lang];
+  });
+}
 </script>
 
 </body>
