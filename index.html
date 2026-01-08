@@ -1,86 +1,112 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Nursyam | Digital Freelancer</title>
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<button class="lang-toggle" id="langToggle">ID / EN</button>
-
-<a href="https://wa.me/628XXXXXXXXX" class="wa-float" target="_blank">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-</a>
-
-<header class="hero fade-up">
-  <div class="hero-text">
-    <h1>Muhammad Anindya <span>Nursyam</span></h1>
-    <p data-id="Digital Freelancer • Web & Digital Marketing"
-       data-en="Digital Freelancer • Web & Digital Marketing">
-       Digital Freelancer • Web & Digital Marketing
-    </p>
-    <a href="#contact" class="btn"
-       data-id="Hubungi Saya"
-       data-en="Contact Me">
-       Hubungi Saya
-    </a>
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="logo">Nursyam</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#testimonials">Testimoni</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="lang-toggle" id="langToggle">ID / EN</button>
   </div>
+</nav>
 
-  <div class="hero-img">
-    <img src="https://via.placeholder.com/400x500.png?text=Your+Photo" alt="Nursyam">
+<!-- HERO -->
+<header class="hero fade-up">
+  <div class="hero-container">
+    <div class="hero-text">
+      <h1>Muhammad Anindya <span>Nursyam</span></h1>
+      <p data-id="Digital Freelancer • Web & Digital Marketing"
+         data-en="Digital Freelancer • Web & Digital Marketing">
+         Digital Freelancer • Web & Digital Marketing
+      </p>
+      <a href="#contact" class="btn"
+         data-id="Hubungi Saya"
+         data-en="Contact Me">
+         Hubungi Saya
+      </a>
+    </div>
+
+    <div class="hero-img">
+      <img src="https://via.placeholder.com/400x500.png?text=Your+Photo" alt="Nursyam">
+    </div>
   </div>
 </header>
 
-<section class="section fade-up">
-  <h2 data-id="Tentang Saya" data-en="About Me">Tentang Saya</h2>
-  <p data-id="Saya adalah freelancer muda yang fokus pada website modern dan digital marketing. Memiliki sertifikat RevoU dan terbiasa bekerja secara profesional."
-     data-en="I am a young freelancer focused on modern websites and digital marketing. Certified by RevoU and used to professional workflows.">
-  </p>
-</section>
-
-<section class="section fade-up">
-  <h2>Skills</h2>
-  <div class="grid">
-    <div class="card">HTML & CSS</div>
-    <div class="card">JavaScript (Basic)</div>
-    <div class="card">Landing Page</div>
-    <div class="card">Digital Marketing</div>
-    <div class="card">Content Strategy</div>
-    <div class="card">Canva</div>
+<!-- ABOUT -->
+<section id="about" class="section fade-up">
+  <div class="container">
+    <h2 data-id="Tentang Saya" data-en="About Me">Tentang Saya</h2>
+    <p data-id="Saya adalah freelancer muda yang fokus pada website modern dan digital marketing. Memiliki sertifikat RevoU dan terbiasa bekerja secara profesional."
+       data-en="I am a young freelancer focused on modern websites and digital marketing. Certified by RevoU and used to professional workflows.">
+    </p>
   </div>
 </section>
 
-<section class="section fade-up">
-  <h2 data-id="Testimoni" data-en="Testimonials">Testimoni</h2>
-  <div class="grid">
-    <div class="card">
-      “Hasilnya rapi dan modern.”
-      <strong>— Andi, UMKM Owner</strong>
-    </div>
-    <div class="card">
-      “Komunikasi enak, fast response.”
-      <strong>— Sarah, Content Manager</strong>
+<!-- SKILLS -->
+<section id="skills" class="section fade-up">
+  <div class="container">
+    <h2>Skills</h2>
+    <div class="grid">
+      <div class="card">HTML & CSS</div>
+      <div class="card">JavaScript (Basic)</div>
+      <div class="card">Landing Page</div>
+      <div class="card">Digital Marketing</div>
+      <div class="card">Content Strategy</div>
+      <div class="card">Canva</div>
     </div>
   </div>
 </section>
 
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="section fade-up">
+  <div class="container">
+    <h2 data-id="Testimoni" data-en="Testimonials">Testimoni</h2>
+    <div class="grid">
+      <div class="card">
+        “Hasilnya rapi dan modern.”
+        <strong>— Andi, UMKM Owner</strong>
+      </div>
+      <div class="card">
+        “Komunikasi enak, fast response.”
+        <strong>— Sarah, Content Manager</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
 <section id="contact" class="section fade-up">
-  <h2>Contact</h2>
-  <p>Email: yourmail@gmail.com</p>
-  <div class="socials">
-    <a href="#">Instagram</a>
-    <a href="#">LinkedIn</a>
-    <a href="#">GitHub</a>
+  <div class="container">
+    <h2>Contact</h2>
+    <p>Email: yourmail@gmail.com</p>
+    <div class="socials">
+      <a href="#">Instagram</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">GitHub</a>
+    </div>
   </div>
 </section>
 
 <footer>
   © 2026 Nursyam — Digital Freelancer
 </footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/628XXXXXXXXX" class="wa-float" target="_blank">WhatsApp</a>
 
 <script src="script.js"></script>
 </body>
