@@ -1,186 +1,23 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nursyam | Digital Freelancer</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nursyam | Digital Freelancer</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<style>
-:root{
-  --bg:#020617;
-  --card:#0f172a;
-  --primary:#38bdf8;
-  --text:#e5e7eb;
-  --muted:#9ca3af;
-}
-
-*{box-sizing:border-box;margin:0;padding:0;font-family:'Inter',sans-serif}
-
-body{
-  background:radial-gradient(circle at top,#020617,#020617);
-  color:var(--text);
-}
-
-/* ====== GLOBAL ====== */
-section{
-  max-width:1100px;
-  margin:auto;
-  padding:80px 20px;
-}
-
-.card{
-  background:rgba(255,255,255,0.04);
-  border-radius:18px;
-  padding:32px;
-  backdrop-filter:blur(12px);
-}
-
-/* ====== HERO ====== */
-header{
-  max-width:1100px;
-  margin:auto;
-  padding:90px 20px 40px;
-  display:grid;
-  grid-template-columns:1.2fr 1fr;
-  gap:40px;
-  align-items:center;
-}
-
-.hero{
-  animation:fadeUp 1s ease forwards;
-}
-
-.hero h1{
-  font-size:3rem;
-  font-weight:700;
-}
-
-.hero span{color:var(--primary)}
-
-.hero p{
-  margin:18px 0 28px;
-  color:var(--muted);
-  font-size:1.1rem;
-}
-
-.btn{
-  display:inline-block;
-  padding:14px 30px;
-  background:linear-gradient(135deg,#38bdf8,#0ea5e9);
-  color:#020617;
-  border-radius:12px;
-  font-weight:600;
-  text-decoration:none;
-}
-
-.photo{
-  display:flex;
-  justify-content:center;
-  animation:fadeUp 1.2s ease forwards;
-}
-
-.photo img{
-  width:260px;
-  border-radius:26px;
-  animation:float 6s ease-in-out infinite;
-  box-shadow:0 20px 50px rgba(0,0,0,.6);
-}
-
-/* ====== CONTENT ====== */
-h2{
-  font-size:2rem;
-  margin-bottom:20px;
-}
-
-.skills-grid,
-.portfolio-grid,
-.testimonial-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:20px;
-}
-
-.skill{text-align:center;font-weight:600}
-
-/* ====== SOCIAL ====== */
-.socials{
-  display:flex;
-  gap:20px;
-  flex-wrap:wrap;
-}
-
-.socials a{
-  color:var(--primary);
-  text-decoration:none;
-  font-weight:600;
-}
-
-/* ====== FLOATING ====== */
-.lang-toggle{
-  position:fixed;
-  top:18px;
-  right:18px;
-  background:rgba(255,255,255,.08);
-  padding:8px 14px;
-  border-radius:20px;
-  cursor:pointer;
-  font-weight:600;
-}
-
-.whatsapp{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25D366;
-  color:#fff;
-  padding:14px 18px;
-  border-radius:50px;
-  font-weight:600;
-  text-decoration:none;
-  box-shadow:0 10px 30px rgba(0,0,0,.3);
-}
-
-/* ====== FOOTER ====== */
-footer{
-  text-align:center;
-  padding:40px 20px;
-  color:var(--muted);
-  font-size:.9rem;
-}
-
-/* ====== ANIMATION ====== */
-@keyframes fadeUp{
-  from{opacity:0;transform:translateY(30px)}
-  to{opacity:1;transform:translateY(0)}
-}
-@keyframes float{
-  0%,100%{transform:translateY(0)}
-  50%{transform:translateY(-12px)}
-}
-
-/* ====== MOBILE ====== */
-@media(max-width:900px){
-  header{
-    grid-template-columns:1fr;
-    text-align:center;
-  }
-  .photo img{width:220px}
-}
-</style>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-<div class="lang-toggle" onclick="toggleLang()">ID / EN</div>
+<button class="lang-toggle" id="langToggle">ID / EN</button>
 
-<a class="whatsapp" href="https://wa.me/628XXXXXXXXX" target="_blank">
-💬 WhatsApp
+<a href="https://wa.me/628XXXXXXXXX" class="wa-float" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
 </a>
 
-<header>
-  <div class="hero">
+<header class="hero fade-up">
+  <div class="hero-text">
     <h1>Muhammad Anindya <span>Nursyam</span></h1>
     <p data-id="Digital Freelancer • Web & Digital Marketing"
        data-en="Digital Freelancer • Web & Digital Marketing">
@@ -193,75 +30,58 @@ footer{
     </a>
   </div>
 
-  <div class="photo">
-    <img src="https://via.placeholder.com/400x500.png?text=Your+Photo">
+  <div class="hero-img">
+    <img src="https://via.placeholder.com/400x500.png?text=Your+Photo" alt="Nursyam">
   </div>
 </header>
 
-<section>
-  <div class="card">
-    <h2 data-id="Tentang Saya" data-en="About Me">Tentang Saya</h2>
-    <p data-id="Saya adalah freelancer muda yang fokus pada website modern dan digital marketing. Berpengalaman belajar di RevoU dan terbiasa bekerja dengan standar profesional."
-       data-en="I am a young freelancer focused on modern websites and digital marketing. Trained at RevoU and used to working with professional standards.">
-    </p>
+<section class="section fade-up">
+  <h2 data-id="Tentang Saya" data-en="About Me">Tentang Saya</h2>
+  <p data-id="Saya adalah freelancer muda yang fokus pada website modern dan digital marketing. Memiliki sertifikat RevoU dan terbiasa bekerja secara profesional."
+     data-en="I am a young freelancer focused on modern websites and digital marketing. Certified by RevoU and used to professional workflows.">
+  </p>
+</section>
+
+<section class="section fade-up">
+  <h2>Skills</h2>
+  <div class="grid">
+    <div class="card">HTML & CSS</div>
+    <div class="card">JavaScript (Basic)</div>
+    <div class="card">Landing Page</div>
+    <div class="card">Digital Marketing</div>
+    <div class="card">Content Strategy</div>
+    <div class="card">Canva</div>
   </div>
 </section>
 
-<section>
-  <div class="card">
-    <h2>Skills</h2>
-    <div class="skills-grid">
-      <div class="skill">HTML & CSS</div>
-      <div class="skill">JavaScript (Basic)</div>
-      <div class="skill">Landing Page</div>
-      <div class="skill">Digital Marketing</div>
-      <div class="skill">Content Strategy</div>
-      <div class="skill">Canva</div>
+<section class="section fade-up">
+  <h2 data-id="Testimoni" data-en="Testimonials">Testimoni</h2>
+  <div class="grid">
+    <div class="card">
+      “Hasilnya rapi dan modern.”
+      <strong>— Andi, UMKM Owner</strong>
+    </div>
+    <div class="card">
+      “Komunikasi enak, fast response.”
+      <strong>— Sarah, Content Manager</strong>
     </div>
   </div>
 </section>
 
-<section>
-  <div class="card">
-    <h2 data-id="Testimoni" data-en="Testimonials">Testimoni</h2>
-    <div class="testimonial-grid">
-      <div class="card">
-        “Hasil kerja rapi, modern, dan cepat.”
-        <strong>— Andi, UMKM Owner</strong>
-      </div>
-      <div class="card">
-        “Komunikasi enak dan paham kebutuhan klien.”
-        <strong>— Sarah, Content Manager</strong>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="contact">
-  <div class="card">
-    <h2>Contact</h2>
-    <p>Email: yourmail@gmail.com</p>
-    <div class="socials">
-      <a href="#">Instagram</a>
-      <a href="#">LinkedIn</a>
-      <a href="#">GitHub</a>
-    </div>
+<section id="contact" class="section fade-up">
+  <h2>Contact</h2>
+  <p>Email: yourmail@gmail.com</p>
+  <div class="socials">
+    <a href="#">Instagram</a>
+    <a href="#">LinkedIn</a>
+    <a href="#">GitHub</a>
   </div>
 </section>
 
 <footer>
-© 2026 Nursyam — Digital Freelancer
+  © 2026 Nursyam — Digital Freelancer
 </footer>
 
-<script>
-let lang='id';
-function toggleLang(){
-  lang = lang === 'id' ? 'en' : 'id';
-  document.querySelectorAll('[data-id]').forEach(el=>{
-    el.textContent = el.dataset[lang];
-  });
-}
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
