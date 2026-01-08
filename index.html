@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Web & Digital Marketing</title>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0b0f19;
+      --card: #11162a;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #6366f1;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    section {
+      padding: 100px 8%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h1, h2, h3 {
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    p {
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: 3.2rem;
+      max-width: 700px;
+    }
+
+    .hero span {
+      color: var(--accent);
+    }
+
+    .hero p {
+      margin-top: 20px;
+      max-width: 600px;
+      font-size: 1.1rem;
+    }
+
+    .cta {
+      margin-top: 40px;
+      display: inline-block;
+      padding: 14px 34px;
+      background: var(--accent);
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .cta:hover {
+      transform: translateY(-3px);
+      opacity: 0.9;
+    }
+
+    /* SECTION TITLE */
+    .section-title {
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      font-size: 2.2rem;
+    }
+
+    .section-title p {
+      margin-top: 10px;
+      max-width: 500px;
+    }
+
+    /* ABOUT */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+    }
+
+    /* SKILLS */
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+    }
+
+    .skill {
+      background: var(--card);
+      padding: 24px;
+      border-radius: 14px;
+      transition: 0.3s;
+    }
+
+    .skill:hover {
+      transform: translateY(-6px);
+    }
+
+    /* PROJECTS */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px;
+    }
+
+    .project {
+      background: var(--card);
+      padding: 28px;
+      border-radius: 16px;
+      transition: 0.3s;
+    }
+
+    .project:hover {
+      transform: translateY(-8px);
+    }
+
+    .project h3 {
+      margin-bottom: 10px;
+    }
+
+    /* CONTACT */
+    .contact-box {
+      background: linear-gradient(135deg, #6366f1, #8b5cf6);
+      padding: 60px;
+      border-radius: 24px;
+      text-align: center;
+    }
+
+    .contact-box h2 {
+      font-size: 2.4rem;
+    }
+
+    .contact-box p {
+      color: #e0e7ff;
+      margin-top: 15px;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 40px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    /* ANIMATION */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: 0.9s ease;
+    }
+
+    .reveal.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.3rem;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-box {
+        padding: 40px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero reveal">
+    <div>
+      <h1>
+        I build <span>modern websites</span><br>
+        and digital presence<br>
+        that actually work.
+      </h1>
+      <p>
+        Freelance Web & Digital Marketing.  
+        Background from RevoU Coding Camp & Digital Marketing Program.
+      </p>
+      <a href="#contact" class="cta">Let’s Work Together</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="reveal">
+    <div class="section-title">
+      <h2>About Me</h2>
+      <p>Young digital talent with a strong focus on clarity, design, and results.</p>
+    </div>
+
+    <div class="about-grid">
+      <p>
+        I help brands, UMKM, and personal projects present themselves professionally
+        through clean websites and thoughtful digital content.
+        My approach prioritizes usability, modern aesthetics, and clear communication.
+      </p>
+      <p>
+        With hands-on learning from RevoU, I understand both technical execution
+        and digital marketing fundamentals. I work efficiently, communicate clearly,
+        and always aim to deliver value.
+      </p>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="reveal">
+    <div class="section-title">
+      <h2>Skills</h2>
+      <p>Tools and expertise I use to deliver quality results.</p>
+    </div>
+
+    <div class="skills">
+      <div class="skill">HTML, CSS (Responsive & Clean Layout)</div>
+      <div class="skill">Basic JavaScript Interaction</div>
+      <div class="skill">Landing Page & Company Profile</div>
+      <div class="skill">Canva Design & Visual Content</div>
+      <div class="skill">Content Planning (Instagram & TikTok)</div>
+      <div class="skill">Basic Digital Marketing Analytics</div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="reveal">
+    <div class="section-title">
+      <h2>Selected Works</h2>
+      <p>A few examples of what I can help you build.</p>
+    </div>
+
+    <div class="projects">
+      <div class="project">
+        <h3>Modern Landing Page</h3>
+        <p>Responsive landing page focused on clarity, conversion, and clean UI.</p>
+      </div>
+      <div class="project">
+        <h3>Digital Content Strategy</h3>
+        <p>Content planning and copywriting tailored for social media growth.</p>
+      </div>
+      <div class="project">
+        <h3>Personal Portfolio Website</h3>
+        <p>Minimalist portfolio with smooth animations and strong visual hierarchy.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="reveal">
+    <div class="contact-box">
+      <h2>Let’s build something great</h2>
+      <p>
+        Open for freelance projects, collaborations, or discussions.
+      </p>
+      <a href="https://wa.me/62XXXXXXXXXX" class="cta">Contact Me</a>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 — Freelance Web & Digital Marketing
+  </footer>
+
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.15 });
+
+    reveals.forEach(r => observer.observe(r));
+  </script>
+
+</body>
+</html>
