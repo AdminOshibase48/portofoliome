@@ -1,24 +1,19 @@
-// NAVBAR
-const toggle = document.querySelector('.nav-toggle');
-const menu = document.querySelector('.nav-menu');
-toggle.onclick = () => menu.classList.toggle('active');
-
-// REVEAL
-const reveals = document.querySelectorAll('.reveal');
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) entry.target.classList.add('active');
+// Language toggle
+let lang = 'id';
+document.getElementById('langToggle').addEventListener('click', () => {
+  lang = lang === 'id' ? 'en' : 'id';
+  document.querySelectorAll('[data-id]').forEach(el => {
+    el.textContent = el.dataset[lang];
   });
 });
-reveals.forEach(r => observer.observe(r));
 
-// MODAL CERT
-const modal = document.getElementById('modal');
-const modalImg = document.getElementById('modal-img');
-document.querySelectorAll('.certificate').forEach(c => {
-  c.onclick = () => {
-    modal.style.display = 'flex';
-    modalImg.src = c.dataset.img;
-  };
+// Scroll animation
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
 });
-document.querySelector('.close').onclick = () => modal.style.display = 'none';
+
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
