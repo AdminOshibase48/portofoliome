@@ -3,35 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Portfolio Muhammad Anindya Nursyam - Digital Freelancer spesialis Web Development & Digital Marketing">
+  <meta name="keywords" content="freelancer, web developer, digital marketing, landing page, portfolio">
   <title>Nursyam | Digital Freelancer</title>
 
   <link rel="stylesheet" href="style.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+
+<!-- Scroll Progress -->
+<div class="scroll-progress" id="scrollProgress"></div>
 
 <!-- NAVBAR -->
 <nav class="navbar">
   <div class="nav-container">
     <div class="logo">Nursyam</div>
+    
+    <button class="hamburger" id="hamburger">☰</button>
+    
     <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#testimonials">Testimoni</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+    
     <button class="lang-toggle" id="langToggle">ID / EN</button>
   </div>
 </nav>
 
 <!-- HERO -->
-<header class="hero fade-up">
+<header class="hero fade-up" id="home">
   <div class="hero-container">
     <div class="hero-text">
       <h1>Muhammad Anindya <span>Nursyam</span></h1>
-      <p data-id="Digital Freelancer • Web & Digital Marketing"
-         data-en="Digital Freelancer • Web & Digital Marketing">
-         Digital Freelancer • Web & Digital Marketing
+      <p data-id="Freelancer Digital spesialis Website & Digital Marketing. Membantu bisnis tumbuh dengan solusi digital yang efektif."
+         data-en="Digital Freelancer specializing in Website & Digital Marketing. Helping businesses grow with effective digital solutions.">
+         Freelancer Digital spesialis Website & Digital Marketing. Membantu bisnis tumbuh dengan solusi digital yang efektif.
       </p>
       <a href="#contact" class="btn"
          data-id="Hubungi Saya"
@@ -41,7 +52,9 @@
     </div>
 
     <div class="hero-img">
-      <img src="https://via.placeholder.com/400x500.png?text=Your+Photo" alt="Nursyam">
+      <!-- Ganti src dengan foto asli kamu -->
+      <img src="assets/img/pj.png" 
+           alt="Muhammad Anindya Nursyam - Digital Freelancer">
     </div>
   </div>
 </header>
@@ -50,8 +63,16 @@
 <section id="about" class="section fade-up">
   <div class="container">
     <h2 data-id="Tentang Saya" data-en="About Me">Tentang Saya</h2>
-    <p data-id="Saya adalah freelancer muda yang fokus pada website modern dan digital marketing. Memiliki sertifikat RevoU dan terbiasa bekerja secara profesional."
-       data-en="I am a young freelancer focused on modern websites and digital marketing. Certified by RevoU and used to professional workflows.">
+    <p style="font-size: 1.1rem; line-height: 1.8; max-width: 800px; color: var(--muted);">
+      <span data-id="Saya adalah freelancer muda yang fokus pada pengembangan website modern dan strategi digital marketing. Lulusan program Full Stack Digital Marketing dari RevoU dengan sertifikasi yang diakui industri."
+            data-en="I am a young freelancer focused on modern website development and digital marketing strategies. Graduate of RevoU's Full Stack Digital Marketing program with industry-recognized certification.">
+            Saya adalah freelancer muda yang fokus pada pengembangan website modern dan strategi digital marketing. Lulusan program Full Stack Digital Marketing dari RevoU dengan sertifikasi yang diakui industri.
+      </span>
+      <br><br>
+      <span data-id="Memiliki pengalaman bekerja dengan berbagai klien dari UMKM hingga perusahaan startup. Pendekatan saya adalah memahami kebutuhan bisnis klien dan memberikan solusi yang tepat sasaran."
+            data-en="With experience working with various clients from SMEs to startups. My approach is to understand clients' business needs and provide targeted solutions.">
+            Memiliki pengalaman bekerja dengan berbagai klien dari UMKM hingga perusahaan startup. Pendekatan saya adalah memahami kebutuhan bisnis klien dan memberikan solusi yang tepat sasaran.
+      </span>
     </p>
   </div>
 </section>
@@ -61,12 +82,53 @@
   <div class="container">
     <h2>Skills</h2>
     <div class="grid">
-      <div class="card">HTML & CSS</div>
-      <div class="card">JavaScript (Basic)</div>
-      <div class="card">Landing Page</div>
-      <div class="card">Digital Marketing</div>
-      <div class="card">Content Strategy</div>
-      <div class="card">Canva</div>
+      <div class="card">
+        <h3><i class="fas fa-code"></i> HTML & CSS</h3>
+        <p data-id="Membangun struktur dan styling website yang responsif dan modern."
+           data-en="Building responsive and modern website structure and styling."></p>
+        <div class="skill-bar"><div style="width: 90%"></div></div>
+        <span style="display:block; margin-top:5px; font-size:0.9rem; color:var(--muted);">90%</span>
+      </div>
+      
+      <div class="card">
+        <h3><i class="fab fa-js"></i> JavaScript (Basic)</h3>
+        <p data-id="Implementasi interaksi dan fungsionalitas dasar website."
+           data-en="Implementing basic website interactions and functionality."></p>
+        <div class="skill-bar"><div style="width: 65%"></div></div>
+        <span style="display:block; margin-top:5px; font-size:0.9rem; color:var(--muted);">65%</span>
+      </div>
+      
+      <div class="card">
+        <h3><i class="fas fa-window-maximize"></i> Landing Page</h3>
+        <p data-id="Mendesain dan mengembangkan landing page yang convert tinggi."
+           data-en="Designing and developing high-converting landing pages."></p>
+        <div class="skill-bar"><div style="width: 85%"></div></div>
+        <span style="display:block; margin-top:5px; font-size:0.9rem; color:var(--muted);">85%</span>
+      </div>
+      
+      <div class="card">
+        <h3><i class="fas fa-bullhorn"></i> Digital Marketing</h3>
+        <p data-id="Strategi pemasaran digital untuk meningkatkan brand awareness dan penjualan."
+           data-en="Digital marketing strategies to increase brand awareness and sales."></p>
+        <div class="skill-bar"><div style="width: 80%"></div></div>
+        <span style="display:block; margin-top:5px; font-size:0.9rem; color:var(--muted);">80%</span>
+      </div>
+      
+      <div class="card">
+        <h3><i class="fas fa-chart-line"></i> Content Strategy</h3>
+        <p data-id="Perencanaan konten yang efektif untuk media sosial dan website."
+           data-en="Effective content planning for social media and websites."></p>
+        <div class="skill-bar"><div style="width: 75%"></div></div>
+        <span style="display:block; margin-top:5px; font-size:0.9rem; color:var(--muted);">75%</span>
+      </div>
+      
+      <div class="card">
+        <h3><i class="fas fa-palette"></i> Canva Design</h3>
+        <p data-id="Membuat desain grafis untuk konten sosial media dan marketing materials."
+           data-en="Creating graphic designs for social media content and marketing materials."></p>
+        <div class="skill-bar"><div style="width: 95%"></div></div>
+        <span style="display:block; margin-top:5px; font-size:0.9rem; color:var(--muted);">95%</span>
+      </div>
     </div>
   </div>
 </section>
@@ -77,12 +139,45 @@
     <h2 data-id="Testimoni" data-en="Testimonials">Testimoni</h2>
     <div class="grid">
       <div class="card">
-        “Hasilnya rapi dan modern.”
-        <strong>— Andi, UMKM Owner</strong>
+        <div style="font-size: 2rem; color: var(--primary); margin-bottom: 10px;">"</div>
+        <p style="font-style: italic; line-height: 1.6;">
+          <span data-id="Hasil website yang diberikan sangat rapi dan modern. Proses pengerjaan tepat waktu dan komunikasi sangat lancar."
+                data-en="The website results provided are very neat and modern. The working process is timely and communication is very smooth.">
+                Hasil website yang diberikan sangat rapi dan modern. Proses pengerjaan tepat waktu dan komunikasi sangat lancar.
+          </span>
+        </p>
+        <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);">
+          <strong>— Andi Wijaya</strong><br>
+          <span style="font-size: 0.9rem; color: var(--muted);" data-id="Owner UMKM Kuliner" data-en="Culinary SME Owner">Owner UMKM Kuliner</span>
+        </div>
       </div>
+      
       <div class="card">
-        “Komunikasi enak, fast response.”
-        <strong>— Sarah, Content Manager</strong>
+        <div style="font-size: 2rem; color: var(--primary); margin-bottom: 10px;">"</div>
+        <p style="font-style: italic; line-height: 1.6;">
+          <span data-id="Komunikasi enak, fast response! Strategi digital marketing yang diberikan meningkatkan penjualan online kami sebesar 40% dalam 3 bulan."
+                data-en="Great communication, fast response! The digital marketing strategy provided increased our online sales by 40% in 3 months.">
+                Komunikasi enak, fast response! Strategi digital marketing yang diberikan meningkatkan penjualan online kami sebesar 40% dalam 3 bulan.
+          </span>
+        </p>
+        <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);">
+          <strong>— Sarah Amanda</strong><br>
+          <span style="font-size: 0.9rem; color: var(--muted);" data-id="Content Manager Startup" data-en="Startup Content Manager">Content Manager Startup</span>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div style="font-size: 2rem; color: var(--primary); margin-bottom: 10px;">"</div>
+        <p style="font-style: italic; line-height: 1.6;">
+          <span data-id="Landing page untuk campaign produk baru kami convert rate-nya tinggi. Desainnya user-friendly dan sesuai target market."
+                data-en="The landing page for our new product campaign has a high conversion rate. The design is user-friendly and suits the target market.">
+                Landing page untuk campaign produk baru kami convert rate-nya tinggi. Desainnya user-friendly dan sesuai target market.
+          </span>
+        </p>
+        <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);">
+          <strong>— Rizky Pratama</strong><br>
+          <span style="font-size: 0.9rem; color: var(--muted);" data-id="Marketing Director" data-en="Marketing Director">Marketing Director</span>
+        </div>
       </div>
     </div>
   </div>
@@ -92,21 +187,50 @@
 <section id="contact" class="section fade-up">
   <div class="container">
     <h2>Contact</h2>
-    <p>Email: yourmail@gmail.com</p>
+    
+    <p style="font-size: 1.1rem; margin-bottom: 30px;">
+      <i class="fas fa-envelope" style="color: var(--primary); margin-right: 10px;"></i>
+      Email: <strong>nursyamm211@gmail.com</strong>
+    </p>
+    
+    <div class="contact-form" id="contactForm">
+      <input type="text" placeholder="Nama" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="Pesan" rows="5" required></textarea>
+      <button type="submit" class="btn" data-id="Kirim Pesan" data-en="Send Message">Kirim Pesan</button>
+    </div>
+    
     <div class="socials">
-      <a href="#">Instagram</a>
-      <a href="#">LinkedIn</a>
-      <a href="#">GitHub</a>
+      <a href="https://instagram.com" target="_blank">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
+      <a href="https://linkedin.com" target="_blank">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+      <a href="https://github.com" target="_blank">
+        <i class="fab fa-github"></i> GitHub
+      </a>
     </div>
   </div>
 </section>
 
 <footer>
-  © 2026 Nursyam — Digital Freelancer
+  <p>© <span id="footerYear">2026</span> Muhammad Anindya Nursyam — Digital Freelancer</p>
+  <p style="margin-top: 10px; font-size: 0.85rem;">
+    <span data-id="Membangun solusi digital untuk kesuksesan bisnis Anda."
+          data-en="Building digital solutions for your business success.">
+          Membangun solusi digital untuk kesuksesan bisnis Anda.
+    </span>
+  </p>
 </footer>
 
 <!-- WHATSAPP FLOAT -->
-<a href="https://wa.me/628XXXXXXXXX" class="wa-float" target="_blank">WhatsApp</a>
+<a href="https://wa.me/6281234567890" class="wa-float" target="_blank">
+  <i class="fab fa-whatsapp"></i> WhatsApp
+</a>
+
+<!-- Back to Top -->
+<a href="#" class="back-to-top" id="backToTop">↑</a>
 
 <script src="script.js"></script>
 </body>
