@@ -1,7 +1,10 @@
 // DOM Content Loaded
 document.addEventListener('DOMContentLoaded', function() {
   // Set current year in footer
-  document.getElementById('currentYear').textContent = new Date().getFullYear();
+  const currentYear = document.getElementById('currentYear');
+  if (currentYear) {
+    currentYear.textContent = new Date().getFullYear();
+  }
   
   // Initialize all components
   initNavbar();
@@ -10,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
   initBackToTop();
   initContactForm();
   initLanguageToggle();
+  initModal();
 });
 
 // ===== NAVBAR =====
@@ -164,6 +168,30 @@ function initLanguageToggle() {
   }
 }
 
+// ===== MODAL =====
+function initModal() {
+  const closeModalBtn = document.querySelector('.close-modal');
+  const modal = document.getElementById('certModal');
+  
+  if (closeModalBtn && modal) {
+    closeModalBtn.addEventListener('click', closeModal);
+    
+    // Close modal when clicking outside
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+    
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && modal.style.display === 'flex') {
+        closeModal();
+      }
+    });
+  }
+}
+
 // ===== CERTIFICATE DETAILS MODAL =====
 function showCertDetails(type) {
   const modal = document.getElementById('certModal');
@@ -254,33 +282,12 @@ function showCertDetails(type) {
 
 // Close modal function
 function closeModal() {
-  document.getElementById('certModal').style.display = 'none';
-  document.body.style.overflow = 'auto';
-}
-
-// Initialize modal close button
-document.addEventListener('DOMContentLoaded', function() {
-  const closeModalBtn = document.querySelector('.close-modal');
   const modal = document.getElementById('certModal');
-  
-  if (closeModalBtn && modal) {
-    closeModalBtn.addEventListener('click', closeModal);
-    
-    // Close modal when clicking outside
-    modal.addEventListener('click', function(e) {
-      if (e.target === modal) {
-        closeModal();
-      }
-    });
-    
-    // Close modal with Escape key
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape' && modal.style.display === 'flex') {
-        closeModal();
-      }
-    });
+  if (modal) {
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
   }
-});
+}
 
 // ===== SMOOTH SCROLL =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -292,7 +299,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     
     const targetElement = document.querySelector(targetId);
     if (targetElement) {
-      const navbarHeight = document.querySelector('.navbar').offsetHeight;
+      const navbarHeight = document.querySelector('.navbar')?.offsetHeight || 70;
       const targetPosition = targetElement.offsetTop - navbarHeight;
       
       window.scrollTo({
