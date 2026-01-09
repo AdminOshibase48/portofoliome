@@ -199,17 +199,17 @@ function showCertDetails(type) {
   
   const certData = {
     'dm': {
-      title: 'Full Stack Digital Marketing',
+      title: 'Mini Course Digital Marketing',
       issuer: 'RevoU',
-      date: 'December 2023',
+      date: 'November 2025',
       description: 'Sertifikasi lengkap digital marketing meliputi SEO, Social Media Marketing, Google Analytics, Content Strategy, dan Performance Marketing.',
       skills: ['SEO Optimization', 'Social Media Strategy', 'Google Analytics', 'Content Creation', 'Performance Marketing', 'Campaign Management'],
       verification: 'Dapat diverifikasi melalui LinkedIn profile atau dengan menghubungi RevoU langsung.'
     },
     'coding': {
-      title: 'Coding Camp',
+      title: 'Coding Camp Software Engineering',
       issuer: 'RevoU', 
-      date: '2023',
+      date: 'Desember 2025',
       description: 'Bootcamp intensif web development dengan fokus pada HTML, CSS, JavaScript, dan best practices pengembangan website modern.',
       skills: ['HTML5 & CSS3', 'JavaScript Fundamentals', 'Responsive Design', 'Git Version Control', 'Web Development', 'Debugging'],
       verification: 'Dapat diverifikasi melalui LinkedIn profile atau portfolio proyek yang dikerjakan selama bootcamp.'
