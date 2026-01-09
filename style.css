@@ -697,36 +697,17 @@ h2 {
 
 /* ===== FOOTER ===== */
 footer {
-  background: rgba(0, 0, 0, 0.3);
-  padding: 4rem 2rem;
   text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.footer-content {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.footer-logo {
-  font-size: 2rem;
-  font-weight: 700;
-  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  margin-bottom: 1rem;
-}
-
-.footer-tagline {
-  color: var(--muted);
-  margin-bottom: 2rem;
-  font-size: 1.1rem;
-}
-
-.copyright {
+  padding: 40px 20px;
   color: var(--muted);
   font-size: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+  margin: 0;
+  line-height: 1.6;
 }
 
 /* ===== FLOATING BUTTONS ===== */
