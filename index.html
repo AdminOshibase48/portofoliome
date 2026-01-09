@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Portfolio Muhammad Anindya Nursyam - Digital Freelancer spesialis Web Development & Digital Marketing">
-  <meta name="keywords" content="freelancer, web developer, digital marketing, landing page, portfolio">
-  <title>Nursyam | Digital Freelancer</title>
+  <meta name="description" content="Portfolio Muhammad Anindya Nursyam - RevoU Certified Digital Freelancer">
+  <title>Nursyam | RevoU Certified Freelancer</title>
 
   <link rel="stylesheet" href="style.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -27,6 +26,7 @@
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
+      <li><a href="#certifications">Certifications</a></li>
       <li><a href="#testimonials">Testimoni</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -40,21 +40,34 @@
   <div class="hero-container">
     <div class="hero-text">
       <h1>Muhammad Anindya <span>Nursyam</span></h1>
-      <p data-id="Freelancer Digital spesialis Website & Digital Marketing. Membantu bisnis tumbuh dengan solusi digital yang efektif."
-         data-en="Digital Freelancer specializing in Website & Digital Marketing. Helping businesses grow with effective digital solutions.">
-         Freelancer Digital spesialis Website & Digital Marketing. Membantu bisnis tumbuh dengan solusi digital yang efektif.
+      <p data-id="RevoU Certified Professional • Full Stack Digital Solution • Website Development & Digital Marketing"
+         data-en="RevoU Certified Professional • Full Stack Digital Solution • Website Development & Digital Marketing">
+         RevoU Certified Professional • Full Stack Digital Solution
       </p>
+      
+      <!-- Certification Badges -->
+      <div class="hero-badges">
+        <span class="badge badge-revou">
+          <i class="fas fa-award"></i> RevoU Certified
+        </span>
+        <span class="badge badge-dm">
+          <i class="fas fa-bullhorn"></i> Digital Marketing
+        </span>
+        <span class="badge badge-coding">
+          <i class="fas fa-code"></i> Web Development
+        </span>
+      </div>
+      
       <a href="#contact" class="btn"
          data-id="Hubungi Saya"
          data-en="Contact Me">
-         Hubungi Saya
+         <i class="fas fa-paper-plane"></i> Hubungi Saya
       </a>
     </div>
 
     <div class="hero-img">
-      <!-- Ganti src dengan foto asli kamu -->
-      <img src="assets/img/pj.png" 
-           alt="Muhammad Anindya Nursyam - Digital Freelancer">
+      <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=774&q=80" 
+           alt="Muhammad Anindya Nursyam">
     </div>
   </div>
 </header>
@@ -63,17 +76,35 @@
 <section id="about" class="section fade-up">
   <div class="container">
     <h2 data-id="Tentang Saya" data-en="About Me">Tentang Saya</h2>
-    <p style="font-size: 1.1rem; line-height: 1.8; max-width: 800px; color: var(--muted);">
-      <span data-id="Saya adalah freelancer muda yang fokus pada pengembangan website modern dan strategi digital marketing. Lulusan program Full Stack Digital Marketing dari RevoU dengan sertifikasi yang diakui industri."
-            data-en="I am a young freelancer focused on modern website development and digital marketing strategies. Graduate of RevoU's Full Stack Digital Marketing program with industry-recognized certification.">
-            Saya adalah freelancer muda yang fokus pada pengembangan website modern dan strategi digital marketing. Lulusan program Full Stack Digital Marketing dari RevoU dengan sertifikasi yang diakui industri.
-      </span>
-      <br><br>
-      <span data-id="Memiliki pengalaman bekerja dengan berbagai klien dari UMKM hingga perusahaan startup. Pendekatan saya adalah memahami kebutuhan bisnis klien dan memberikan solusi yang tepat sasaran."
-            data-en="With experience working with various clients from SMEs to startups. My approach is to understand clients' business needs and provide targeted solutions.">
-            Memiliki pengalaman bekerja dengan berbagai klien dari UMKM hingga perusahaan startup. Pendekatan saya adalah memahami kebutuhan bisnis klien dan memberikan solusi yang tepat sasaran.
-      </span>
-    </p>
+    
+    <div class="about-content">
+      <div class="about-text">
+        <p data-id="Lulusan double certification RevoU dengan spesialisasi di Digital Marketing dan Web Development. Saya menawarkan solusi lengkap untuk bisnis digital Anda."
+           data-en="Graduate of RevoU double certification specializing in Digital Marketing and Web Development. I offer complete solutions for your digital business.">
+           Lulusan double certification RevoU dengan spesialisasi di Digital Marketing dan Web Development.
+        </p>
+        
+        <div class="about-highlight">
+          <div class="highlight-item">
+            <i class="fas fa-rocket"></i>
+            <h4 data-id="Solusi Lengkap" data-en="Complete Solution">Solusi Lengkap</h4>
+            <p data-id="Dari website hingga marketing" data-en="From website to marketing">Dari website hingga marketing</p>
+          </div>
+          
+          <div class="highlight-item">
+            <i class="fas fa-certificate"></i>
+            <h4 data-id="Bersertifikat" data-en="Certified">Bersertifikat</h4>
+            <p data-id="Lulusan resmi RevoU" data-en="Official RevoU graduate">Lulusan resmi RevoU</p>
+          </div>
+          
+          <div class="highlight-item">
+            <i class="fas fa-bolt"></i>
+            <h4 data-id="Project-Based" data-en="Project-Based">Project-Based</h4>
+            <p data-id="Fokus pada hasil" data-en="Focus on results">Fokus pada hasil</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -81,53 +112,162 @@
 <section id="skills" class="section fade-up">
   <div class="container">
     <h2>Skills</h2>
-    <div class="grid">
-      <div class="card">
-        <h3><i class="fas fa-code"></i> HTML & CSS</h3>
-        <p data-id="Membangun struktur dan styling website yang responsif dan modern."
-           data-en="Building responsive and modern website structure and styling."></p>
-        <div class="skill-bar"><div style="width: 90%"></div></div>
-        <span style="display:block; margin-top:5px; font-size:0.9rem; color:var(--muted);">90%</span>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-icon">
+          <i class="fab fa-html5"></i>
+        </div>
+        <h3>HTML & CSS</h3>
+        <div class="skill-bar"><div class="skill-level" style="width: 90%"></div></div>
+        <span class="skill-percent">90%</span>
       </div>
       
-      <div class="card">
-        <h3><i class="fab fa-js"></i> JavaScript (Basic)</h3>
-        <p data-id="Implementasi interaksi dan fungsionalitas dasar website."
-           data-en="Implementing basic website interactions and functionality."></p>
-        <div class="skill-bar"><div style="width: 65%"></div></div>
-        <span style="display:block; margin-top:5px; font-size:0.9rem; color:var(--muted);">65%</span>
+      <div class="skill-card">
+        <div class="skill-icon">
+          <i class="fab fa-js"></i>
+        </div>
+        <h3>JavaScript</h3>
+        <div class="skill-bar"><div class="skill-level" style="width: 65%"></div></div>
+        <span class="skill-percent">65%</span>
       </div>
       
-      <div class="card">
-        <h3><i class="fas fa-window-maximize"></i> Landing Page</h3>
-        <p data-id="Mendesain dan mengembangkan landing page yang convert tinggi."
-           data-en="Designing and developing high-converting landing pages."></p>
-        <div class="skill-bar"><div style="width: 85%"></div></div>
-        <span style="display:block; margin-top:5px; font-size:0.9rem; color:var(--muted);">85%</span>
+      <div class="skill-card">
+        <div class="skill-icon">
+          <i class="fas fa-window-maximize"></i>
+        </div>
+        <h3>Landing Page</h3>
+        <div class="skill-bar"><div class="skill-level" style="width: 85%"></div></div>
+        <span class="skill-percent">85%</span>
       </div>
       
-      <div class="card">
-        <h3><i class="fas fa-bullhorn"></i> Digital Marketing</h3>
-        <p data-id="Strategi pemasaran digital untuk meningkatkan brand awareness dan penjualan."
-           data-en="Digital marketing strategies to increase brand awareness and sales."></p>
-        <div class="skill-bar"><div style="width: 80%"></div></div>
-        <span style="display:block; margin-top:5px; font-size:0.9rem; color:var(--muted);">80%</span>
+      <div class="skill-card">
+        <div class="skill-icon">
+          <i class="fas fa-bullhorn"></i>
+        </div>
+        <h3>Digital Marketing</h3>
+        <div class="skill-bar"><div class="skill-level" style="width: 80%"></div></div>
+        <span class="skill-percent">80%</span>
       </div>
       
-      <div class="card">
-        <h3><i class="fas fa-chart-line"></i> Content Strategy</h3>
-        <p data-id="Perencanaan konten yang efektif untuk media sosial dan website."
-           data-en="Effective content planning for social media and websites."></p>
-        <div class="skill-bar"><div style="width: 75%"></div></div>
-        <span style="display:block; margin-top:5px; font-size:0.9rem; color:var(--muted);">75%</span>
+      <div class="skill-card">
+        <div class="skill-icon">
+          <i class="fas fa-chart-line"></i>
+        </div>
+        <h3>Content Strategy</h3>
+        <div class="skill-bar"><div class="skill-level" style="width: 75%"></div></div>
+        <span class="skill-percent">75%</span>
       </div>
       
-      <div class="card">
-        <h3><i class="fas fa-palette"></i> Canva Design</h3>
-        <p data-id="Membuat desain grafis untuk konten sosial media dan marketing materials."
-           data-en="Creating graphic designs for social media content and marketing materials."></p>
-        <div class="skill-bar"><div style="width: 95%"></div></div>
-        <span style="display:block; margin-top:5px; font-size:0.9rem; color:var(--muted);">95%</span>
+      <div class="skill-card">
+        <div class="skill-icon">
+          <i class="fas fa-palette"></i>
+        </div>
+        <h3>Canva Design</h3>
+        <div class="skill-bar"><div class="skill-level" style="width: 95%"></div></div>
+        <span class="skill-percent">95%</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS (SAFE VERSION) -->
+<section id="certifications" class="section fade-up">
+  <div class="container">
+    <h2 data-id="Sertifikasi Resmi" data-en="Official Certifications">Sertifikasi Resmi</h2>
+    <p class="section-subtitle" data-id="Terverifikasi oleh RevoU - Dapat diverifikasi melalui LinkedIn" 
+       data-en="Verified by RevoU - Can be verified via LinkedIn">
+       Terverifikasi oleh RevoU
+    </p>
+    
+    <div class="certs-grid">
+      <!-- Digital Marketing Certificate -->
+      <div class="cert-card">
+        <div class="cert-header">
+          <div class="cert-badge-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <div class="cert-info">
+            <h3>Full Stack Digital Marketing</h3>
+            <p class="cert-issuer">RevoU</p>
+            <p class="cert-date">December 2023</p>
+          </div>
+        </div>
+        
+        <div class="cert-skills">
+          <span class="skill-tag">SEO</span>
+          <span class="skill-tag">Social Media</span>
+          <span class="skill-tag">Google Analytics</span>
+          <span class="skill-tag">Content Strategy</span>
+        </div>
+        
+        <div class="cert-actions">
+          <a href="https://www.linkedin.com/in/" target="_blank" class="verify-btn">
+            <i class="fab fa-linkedin"></i> 
+            <span data-id="Verifikasi di LinkedIn" data-en="Verify on LinkedIn">Verifikasi di LinkedIn</span>
+          </a>
+          <button class="detail-btn" onclick="showCertDetails('dm')">
+            <i class="fas fa-info-circle"></i> Detail
+          </button>
+        </div>
+      </div>
+      
+      <!-- Coding Camp Certificate -->
+      <div class="cert-card">
+        <div class="cert-header">
+          <div class="cert-badge-icon">
+            <i class="fas fa-laptop-code"></i>
+          </div>
+          <div class="cert-info">
+            <h3>Coding Camp</h3>
+            <p class="cert-issuer">RevoU</p>
+            <p class="cert-date">2023</p>
+          </div>
+        </div>
+        
+        <div class="cert-skills">
+          <span class="skill-tag">HTML/CSS</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">Web Development</span>
+          <span class="skill-tag">Git</span>
+        </div>
+        
+        <div class="cert-actions">
+          <a href="https://www.linkedin.com/in/" target="_blank" class="verify-btn">
+            <i class="fab fa-linkedin"></i> 
+            <span data-id="Verifikasi di LinkedIn" data-en="Verify on LinkedIn">Verifikasi di LinkedIn</span>
+          </a>
+          <button class="detail-btn" onclick="showCertDetails('coding')">
+            <i class="fas fa-info-circle"></i> Detail
+          </button>
+        </div>
+      </div>
+      
+      <!-- Unique Value Proposition -->
+      <div class="cert-card unique-value">
+        <div class="cert-header">
+          <div class="cert-badge-icon">
+            <i class="fas fa-star"></i>
+          </div>
+          <div class="cert-info">
+            <h3>Double Certification</h3>
+            <p class="cert-issuer">Kombinasi Unik</p>
+            <p class="cert-date">Tech + Marketing</p>
+          </div>
+        </div>
+        
+        <ul class="value-list">
+          <li><i class="fas fa-check"></i> <span data-id="Website + Marketing" data-en="Website + Marketing">Website + Marketing</span></li>
+          <li><i class="fas fa-check"></i> <span data-id="One-Stop Solution" data-en="One-Stop Solution">One-Stop Solution</span></li>
+          <li><i class="fas fa-check"></i> <span data-id="Konsistensi Brand" data-en="Brand Consistency">Konsistensi Brand</span></li>
+          <li><i class="fas fa-check"></i> <span data-id="Efisiensi Biaya" data-en="Cost Efficient">Efisiensi Biaya</span></li>
+        </ul>
+        
+        <div class="cert-actions">
+          <a href="#contact" class="consult-btn">
+            <i class="fas fa-comments"></i> 
+            <span data-id="Konsultasi Gratis" data-en="Free Consultation">Konsultasi Gratis</span>
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -136,47 +276,54 @@
 <!-- TESTIMONIALS -->
 <section id="testimonials" class="section fade-up">
   <div class="container">
-    <h2 data-id="Testimoni" data-en="Testimonials">Testimoni</h2>
-    <div class="grid">
-      <div class="card">
-        <div style="font-size: 2rem; color: var(--primary); margin-bottom: 10px;">"</div>
-        <p style="font-style: italic; line-height: 1.6;">
-          <span data-id="Hasil website yang diberikan sangat rapi dan modern. Proses pengerjaan tepat waktu dan komunikasi sangat lancar."
-                data-en="The website results provided are very neat and modern. The working process is timely and communication is very smooth.">
-                Hasil website yang diberikan sangat rapi dan modern. Proses pengerjaan tepat waktu dan komunikasi sangat lancar.
-          </span>
-        </p>
-        <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);">
-          <strong>— Andi Wijaya</strong><br>
-          <span style="font-size: 0.9rem; color: var(--muted);" data-id="Owner UMKM Kuliner" data-en="Culinary SME Owner">Owner UMKM Kuliner</span>
+    <h2 data-id="Testimoni Klien" data-en="Client Testimonials">Testimoni Klien</h2>
+    
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-text">
+          <i class="fas fa-quote-left"></i>
+          <p data-id="Website yang dibuat sangat profesional dan modern. Hasilnya melebihi ekspektasi!"
+             data-en="The website created was very professional and modern. The results exceeded expectations!">
+             Website yang dibuat sangat profesional dan modern. Hasilnya melebihi ekspektasi!
+          </p>
+        </div>
+        <div class="testimonial-author">
+          <div class="author-info">
+            <h4>Andi Wijaya</h4>
+            <p data-id="Owner UMKM Kuliner" data-en="Culinary Business Owner">Owner UMKM Kuliner</p>
+          </div>
         </div>
       </div>
       
-      <div class="card">
-        <div style="font-size: 2rem; color: var(--primary); margin-bottom: 10px;">"</div>
-        <p style="font-style: italic; line-height: 1.6;">
-          <span data-id="Komunikasi enak, fast response! Strategi digital marketing yang diberikan meningkatkan penjualan online kami sebesar 40% dalam 3 bulan."
-                data-en="Great communication, fast response! The digital marketing strategy provided increased our online sales by 40% in 3 months.">
-                Komunikasi enak, fast response! Strategi digital marketing yang diberikan meningkatkan penjualan online kami sebesar 40% dalam 3 bulan.
-          </span>
-        </p>
-        <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);">
-          <strong>— Sarah Amanda</strong><br>
-          <span style="font-size: 0.9rem; color: var(--muted);" data-id="Content Manager Startup" data-en="Startup Content Manager">Content Manager Startup</span>
+      <div class="testimonial-card">
+        <div class="testimonial-text">
+          <i class="fas fa-quote-left"></i>
+          <p data-id="Strategi digital marketing yang diberikan meningkatkan penjualan online kami secara signifikan."
+             data-en="The digital marketing strategy provided significantly increased our online sales.">
+             Strategi digital marketing yang diberikan meningkatkan penjualan online kami secara signifikan.
+          </p>
+        </div>
+        <div class="testimonial-author">
+          <div class="author-info">
+            <h4>Sarah Amanda</h4>
+            <p data-id="Content Manager" data-en="Content Manager">Content Manager</p>
+          </div>
         </div>
       </div>
       
-      <div class="card">
-        <div style="font-size: 2rem; color: var(--primary); margin-bottom: 10px;">"</div>
-        <p style="font-style: italic; line-height: 1.6;">
-          <span data-id="Landing page untuk campaign produk baru kami convert rate-nya tinggi. Desainnya user-friendly dan sesuai target market."
-                data-en="The landing page for our new product campaign has a high conversion rate. The design is user-friendly and suits the target market.">
-                Landing page untuk campaign produk baru kami convert rate-nya tinggi. Desainnya user-friendly dan sesuai target market.
-          </span>
-        </p>
-        <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);">
-          <strong>— Rizky Pratama</strong><br>
-          <span style="font-size: 0.9rem; color: var(--muted);" data-id="Marketing Director" data-en="Marketing Director">Marketing Director</span>
+      <div class="testimonial-card">
+        <div class="testimonial-text">
+          <i class="fas fa-quote-left"></i>
+          <p data-id="Komunikasi sangat baik dan proyek selesai tepat waktu. Recommended untuk project digital!"
+             data-en="Communication was excellent and the project was completed on time. Recommended for digital projects!">
+             Komunikasi sangat baik dan proyek selesai tepat waktu. Recommended!
+          </p>
+        </div>
+        <div class="testimonial-author">
+          <div class="author-info">
+            <h4>Rizky Pratama</h4>
+            <p data-id="Marketing Director" data-en="Marketing Director">Marketing Director</p>
+          </div>
         </div>
       </div>
     </div>
@@ -186,51 +333,94 @@
 <!-- CONTACT -->
 <section id="contact" class="section fade-up">
   <div class="container">
-    <h2>Contact</h2>
+    <h2 data-id="Hubungi Saya" data-en="Contact Me">Hubungi Saya</h2>
     
-    <p style="font-size: 1.1rem; margin-bottom: 30px;">
-      <i class="fas fa-envelope" style="color: var(--primary); margin-right: 10px;"></i>
-      Email: <strong>nursyamm211@gmail.com</strong>
-    </p>
-    
-    <div class="contact-form" id="contactForm">
-      <input type="text" placeholder="Nama" required>
-      <input type="email" placeholder="Email" required>
-      <textarea placeholder="Pesan" rows="5" required></textarea>
-      <button type="submit" class="btn" data-id="Kirim Pesan" data-en="Send Message">Kirim Pesan</button>
+    <div class="contact-wrapper">
+      <div class="contact-info">
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <div>
+            <h4>Email</h4>
+            <p>nursyam.digital@example.com</p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <div>
+            <h4 data-id="Lokasi" data-en="Location">Lokasi</h4>
+            <p data-id="Jakarta, Indonesia" data-en="Jakarta, Indonesia">Jakarta, Indonesia</p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <i class="fas fa-clock"></i>
+          <div>
+            <h4 data-id="Jam Kerja" data-en="Working Hours">Jam Kerja</h4>
+            <p data-id="Senin - Jumat: 9AM - 6PM" data-en="Monday - Friday: 9AM - 6PM">Senin - Jumat: 9AM - 6PM</p>
+          </div>
+        </div>
+      </div>
+      
+      <form class="contact-form" id="contactForm">
+        <input type="text" placeholder="Nama" required>
+        <input type="email" placeholder="Email" required>
+        <input type="text" placeholder="Subjek" required>
+        <textarea placeholder="Pesan Anda" rows="5" required></textarea>
+        <button type="submit" class="btn submit-btn">
+          <i class="fas fa-paper-plane"></i> 
+          <span data-id="Kirim Pesan" data-en="Send Message">Kirim Pesan</span>
+        </button>
+      </form>
     </div>
     
-    <div class="socials">
-      <a href="https://instagram.com" target="_blank">
-        <i class="fab fa-instagram"></i> Instagram
+    <div class="social-links">
+      <a href="https://instagram.com" target="_blank" class="social-link">
+        <i class="fab fa-instagram"></i>
       </a>
-      <a href="https://linkedin.com" target="_blank">
-        <i class="fab fa-linkedin"></i> LinkedIn
+      <a href="https://linkedin.com" target="_blank" class="social-link">
+        <i class="fab fa-linkedin"></i>
       </a>
-      <a href="https://github.com" target="_blank">
-        <i class="fab fa-github"></i> GitHub
+      <a href="https://github.com" target="_blank" class="social-link">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://wa.me/6281234567890" target="_blank" class="social-link whatsapp">
+        <i class="fab fa-whatsapp"></i>
       </a>
     </div>
   </div>
 </section>
 
 <footer>
-  <p>© <span id="footerYear">2026</span> Muhammad Anindya Nursyam — Digital Freelancer</p>
-  <p style="margin-top: 10px; font-size: 0.85rem;">
-    <span data-id="Membangun solusi digital untuk kesuksesan bisnis Anda."
-          data-en="Building digital solutions for your business success.">
-          Membangun solusi digital untuk kesuksesan bisnis Anda.
-    </span>
-  </p>
+  <div class="footer-content">
+    <div class="footer-logo">Nursyam</div>
+    <p class="footer-tagline" data-id="Membangun solusi digital untuk bisnis Anda" 
+       data-en="Building digital solutions for your business">
+       Membangun solusi digital untuk bisnis Anda
+    </p>
+    <p class="copyright">© <span id="currentYear"></span> Muhammad Anindya Nursyam. All rights reserved.</p>
+  </div>
 </footer>
 
 <!-- WHATSAPP FLOAT -->
 <a href="https://wa.me/6281234567890" class="wa-float" target="_blank">
-  <i class="fab fa-whatsapp"></i> WhatsApp
+  <i class="fab fa-whatsapp"></i> Chat WhatsApp
 </a>
 
 <!-- Back to Top -->
-<a href="#" class="back-to-top" id="backToTop">↑</a>
+<a href="#" class="back-to-top" id="backToTop">
+  <i class="fas fa-chevron-up"></i>
+</a>
+
+<!-- Certificate Details Modal -->
+<div class="modal" id="certModal">
+  <div class="modal-content">
+    <button class="close-modal">&times;</button>
+    <div class="modal-body" id="modalBody">
+      <!-- Content will be inserted by JavaScript -->
+    </div>
+  </div>
+</div>
 
 <script src="script.js"></script>
 </body>
